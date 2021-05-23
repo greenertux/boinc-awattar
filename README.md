@@ -8,5 +8,7 @@ Shell script that manages BOINC so that it only runs, when energy prices are low
 ### Sample crontab
 This crontab deletes the values downloaded from Awattar once a new day begins and runs the control script every hour
 
-```2 * * * * /path/to/controller.sh
-1 0 * * * rm "/path/to/current.yaml"```
+```
+2 * * * * /path/to/controller.sh
+1 0 * * * rm "/path/to/current.yaml"
+```
