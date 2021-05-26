@@ -17,7 +17,7 @@ else
   fi
 fi
 
-current_price=$(sed -n $((2*$(date +%H)+39)){p} $file | grep -Eo '[+-]?[0-9]+([.][0-9]+)?' | tail -n1)
+current_price=$(sed -n $((2*$(date +%-H)+39)){p} $file | grep -Eo '[+-]?[0-9]+([.][0-9]+)?' | tail -n1)
 echo "current price is" $current_price
 if (( $(echo "$stop_price < $start_price" |bc -l) )); then
   echo "stop price cannot be lower than start price"
