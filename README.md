@@ -6,9 +6,8 @@ Shell script that manages BOINC so that it only runs, when energy prices are low
 2. Create a crontab or another way to run this script after a new hour has started
 
 ### Sample crontab
-This crontab deletes the values downloaded from Awattar once a new day begins and runs the control script every hour
+This crontab runs the control script every hour. In case the time is not exactly in sync I decided to wait for one minute after the full hour.
 
 ```
-2 * * * * /path/to/controller.sh
-1 0 * * * rm "/path/to/current.yaml"
+1 * * * * /path/to/controller.sh
 ```
